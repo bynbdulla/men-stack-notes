@@ -95,4 +95,25 @@ To display javaScript values from an ejs file, I need an output tag:
 ```ejs
 <% user %>
 ```
+### Pass data from the controller 
+Use the locals object inside the render method:
+```js
+res.render('home.ejs',{
+title: 'Home Page',
+})
+```
+Now I can use the `title` variable in my `home.ejs` file.
 
+home.ejs
+```ejs
+<h1><%= title %></h1>
+```
+
+### Using `ForEach` in `ejs` 
+```ejs
+<ul>
+<% inventory.forEach(function(item){ %>
+   <li><%= item.name %></li> 
+<% }) %>
+</ul>
+```
