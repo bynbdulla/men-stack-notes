@@ -85,4 +85,14 @@ app.get('/', function(req,res){
     res.render('home.ejs')
 })
 ```
-  
+##EJS Syntax 
+To use javaScript in an ejs file, I need a scriplet tag:
+```ejs
+<% let user = 'nabila'%>
+```
+
+To display javaScript values from an ejs file, I need an output tag:
+```ejs
+<% user %>
+```
+
