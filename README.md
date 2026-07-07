@@ -117,3 +117,11 @@ home.ejs
 <% }) %>
 </ul>
 ```
+
+### Adding dynamic links to a `show` page 
+`item.name` is dynamically changing with the item. (see `forEach` above)
+
+```ejs
+<a href="<%= item.id %>"><%= item.name %> </a>
+```
+We should see the URL change in the browser. 
